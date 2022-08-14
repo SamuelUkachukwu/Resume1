@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
+<!-- contact section  -->
+  <div class="col-md-11 about-box p-0 contact-box white-color px-3 px-md-4">
+    <div class="contact">
+      <h6>Your Next Project?</h6>
+      <h3 class="contact-text-big">Reach Out To Me</h3>
+      <div>
+        <p><i class="fas fa-phone-alt" aria-hidden="true"></i><a class="phone-number"
+            href="tel:+353831900005">{{about.phone_number}}</a></p>
+      </div>
+      <div>
+        <p>Now that you know what i can do, your next project is the right moment to work with me as a team, building
+          what you love.</p>
+        <p>The door is open click on the link below and lets get that project done together!</p>
+      </div>
+      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Let's build it!
+      </button>
+    </div>
+  </div>
+  {% include 'includes/modal.html' %}
+  {% include 'includes/footer-lg.html' %}
+  {% include 'includes/footer.html' %}
+
+{% endblock %}
