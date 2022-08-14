@@ -89,7 +89,46 @@
     text-align: center;
     padding: 30px 0;
 }
+/* ---------------------hamburger menu */
+.navbar-toggler {
+    color: var(--white);
+    border-color: var(--dark-red);
+}
 
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 1.5em;
+    height: 3px;
+    background-color: var(--white);
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    right: 0;
+}
+
+.hamburger::before {
+    bottom: 7px;
+}
+
+.hamburger::after {
+    top: 7px;
+}
 /*------------------------------------------sidebar styling */
 .sidebar {
     position: fixed;

@@ -40,12 +40,12 @@
                         <a class="nav-link" href="{% static 'cv/resume.pdf' %}" target="_blank">Resume</a>
                     </li>
                 </ul>
-                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="hamburger"></span>
                 </button>
+
                 <!-- offcanvas starts here -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                <div class="offcanvas offcanvas-end bg-dk-red" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbar">
                     <div class="offcanvas-header">
                         <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
@@ -54,7 +54,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link active " aria-current="page" href="{% url 'about' %}">About</a>
+                                <a class="nav-link" aria-current="page" href="{% url 'about' %}">About</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
