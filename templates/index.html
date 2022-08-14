@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+<div class="col-md-11 hero-box d-flex align-items-center p-0">
+    <div class="hero-text-box">
+        <h1 class="fs-5">Hi my name is</h1>
+        <h2 class="text-uppercase fw-bold hr-txt2">{{about.name}}.</h2>
+        <h4 class="fs-3">I am a Fullstack Developer</h4>
+        <p class="hr-txt4">Skilled in everything from HTML to Heroku. The capacity for structural and design
+            thinking.
+        </p>
+    </div>
+    <div class="fancy base"></div>
+    <div class="fancy circle3">8</div>
+    <div class="fancy circle2"></div>
+    <div class="fancy circle1"></div>
+    <div class="fancy side">
+        <a href="mailto:{{about.email}}" target="_blank" rel="noopener"
+            aria-label="send a mail to samuel ukachukwu (opens in a new tab)">{{about.email}}</a>
+    </div>
+    <div class="fancy side2"></div>
+</div>
+{% include 'includes/footer.html' %}
+{% endblock %}
