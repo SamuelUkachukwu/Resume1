@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+
+<!-- About Me  -->
+<div class="col-md-11 about-box px-3 px-md-4">
+    <div class="white-color header-txt">
+        <h3>About Me.</h3>
+    </div>
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="mt-4 about-text m-auto">
+                <h4>What do I do?</h4>
+                <p>{{about.profession}}</p>
+                <h4>How do I do it?</h4>
+                <p>{{about.skills}}</p>
+                <h4>Why hire me?</h4>
+                <p>{{about.engage_me}}</p>
+                <button type="button" class="btn btn-light mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Contact Me
+                </button>
+                </div>
+        </div>
+    </div>
+    {% include 'includes/modal.html' %}
+
+
+</div>
+{% include 'includes/footer-lg.html' %}
+{% include 'includes/footer.html' %}
+{% endblock %}

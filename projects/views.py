@@ -19,3 +19,15 @@ class Home(View):
                 'about': about,
             },
         )
+
+
+class AboutView(View):
+
+    def get(self, request, *args, **kwargs):
+        projects = Project.objects.all().order_by("-pk")
+        queryset = About.objects.filter(pk=1)
+        about = get_object_or_404(queryset, pk=1)
+        return render(request, 'about.html', {
+            'about': about,
+            'projects': projects
+        })
