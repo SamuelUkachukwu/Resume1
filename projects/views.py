@@ -31,3 +31,16 @@ class AboutView(View):
             'about': about,
             'projects': projects
         })
+
+class Projects(generic.ListView):
+    model = Project
+    queryset = Project.objects.all().order_by("-pk")
+    template_name = "projects.html"
+    context_object_name = 'projects'
+
+    def get_context_data(self, *args, **kwargs):
+        queryset = About.objects.filter(pk=1)
+        about = get_object_or_404(queryset, pk=1)
+        context = super(Projects, self).get_context_data(*args, **kwargs)
+        context["about"] = about
+        return context

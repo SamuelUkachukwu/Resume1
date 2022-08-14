@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+
+
+{% block content %}
+<div class="col-md-11 project px-2 px-md-4">
+    <div class="mb-3 white-color header-txt">
+        <h3>Projects I Created.</h3>
+    </div>
+    {% for project in projects %}
+    {% if forloop.counter|divisibleby:"2" %}
+    <div class="d-block d-md-flex align-items-center justify-content-center mt-5 mb-4 py-5">
+        <div class="project-img">
+            <a href="{{ project.host_link }}" target="_blank" rel="noopener"
+                aria-label="visit the {{project.title}} site (opens in a new tab)"><img
+                    src="{{ project.project_image.url }}" alt="{{project.title}} home page"></a>
+        </div>
+
+        <div class="project-info-card">
+            <p class="text-end">project.</p>
+            <h3 class="text-end">{{ project.title}}</h3>
+            <p class="mb-2 roboto-txt text-end">{{ project.languages }}</p>
+            <div class="project-description">
+                <p>{{ project.excerpt }}</p>
+            </div>
+            <div class="project-links d-flex justify-content-end pt-2 fs-4">
+                <a class="white-color p-1 mx-1" href="{{ project.github_link }}" target="_blank" rel="noopener"
+                    aria-label="visit my github page for the {{ project.title }} repository(opens in a new tab)"><i
+                        class="fab fa-github"></i></a>
+                <a class="white-color p-1 mx-1" href="{{ project.host_link }}" target="_blank" rel="noopener"
+                    aria-label="visit the {{ project.title }} (opens in a new tab)"><i
+                        class="fas fa-external-link-square-alt"></i></a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="d-block d-md-flex align-items-center justify-content-center mb-3">
+        <div id="" class="project-info-card reverse-projects">
+            <p class="project-intro text-start">project.</p>
+            <h3 class="roboto-txt text-start">{{ project.title}}</h3>
+            <p class="card-subtitle mb-2 roboto-txt text-start">{{ project.languages }}</p>
+            <div class="project-description">
+                <p>{{ project.excerpt }}</p>
+            </div>
+            <div class="project-links d-flex justify-content-start pt-2 fs-4">
+                <a class="white-color p-1 mx-1" href="{{ project.github_link }}" target="_blank" rel="noopener"
+                    aria-label="visit my github page for the {{ project.title }} repository(opens in a new tab)"><i
+                        class="fab fa-github"></i></a>
+                <a class="white-color p-1 mx-1" href="{{ project.host_link }}" target="_blank" rel="noopener"
+                    aria-label="visit the {{ project.title }} (opens in a new tab)"><i
+                        class="fas fa-external-link-square-alt"></i></a>
+            </div>
+        </div>
+        <div class="project-img">
+            <a href="{{ project.host_link }}" target="_blank" rel="noopener"
+                aria-label="visit the {{project.title}} site (opens in a new tab)"><img
+                    src="{{ project.project_image.url }}" alt="{{project.title}} home page"></a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+<!-- look into this line below -->
+{% include 'includes/footer-lg.html' %}
+</div>
+
+
+{% include 'includes/footer.html' %}
+{% endblock %}
