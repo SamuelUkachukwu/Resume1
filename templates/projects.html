@@ -3,6 +3,7 @@
 
 
 {% block content %}
+{% if projects %}
 <div class="col-md-11 project px-2 px-md-4">
     <div class="mb-3 white-color header-txt">
         <h3>Projects I Created.</h3>
@@ -59,10 +60,15 @@
     </div>
     {% endif %}
     {% endfor %}
-<!-- look into this line below -->
-{% include 'includes/footer-lg.html' %}
 </div>
-
-
+{% include 'includes/footer-lg.html' %}
 {% include 'includes/footer.html' %}
+{% else %}
+<div class="col-md-11 page-box contact-box p-0 white-color">
+<p class="fs-4">Looking Empty Over Here</p>
+</div>
+{% include 'includes/footer-lg.html' %}
+{% include 'includes/footer.html' %}
+{% endif %}
+
 {% endblock %}

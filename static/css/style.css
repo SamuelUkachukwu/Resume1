@@ -103,7 +103,7 @@
     display: block;
     cursor: pointer;
     position: relative;
-    margin-right: 20px;
+    /* margin-right: 16px; */
 }
 
 .hamburger,
@@ -296,7 +296,7 @@ h3 {
 }
 
 /* -----------------------------------about page styling */
-.about-box {
+.page-box {
     margin-left: 8.33%;
     height: 94.4vh;
     position: relative;
@@ -391,7 +391,7 @@ h3 {
 @media screen and (max-width: 768px) {
 
     .hero-box,
-    .about-box {
+    .page-box {
         height: 90.5vh;
     }
 
@@ -401,7 +401,7 @@ h3 {
 
     .hero-box,
     .project,
-    .about-box,
+    .page-box,
     .about-text {
         width: 100%;
         margin: 0;
