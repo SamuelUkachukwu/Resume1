@@ -298,7 +298,7 @@ h3 {
 /* -----------------------------------about page styling */
 .page-box {
     margin-left: 8.33%;
-    height: 94.4vh;
+    height: 100vh;
     position: relative;
     background-color: var(--dark-red);
 }
@@ -389,12 +389,6 @@ h3 {
 
 /*------------------------------------ media screen styling starts here */
 @media screen and (max-width: 768px) {
-
-    .hero-box,
-    .page-box {
-        height: 90.5vh;
-    }
-
     .fancy {
         display: none;
     }
