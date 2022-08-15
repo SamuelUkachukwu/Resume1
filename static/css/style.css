@@ -21,7 +21,6 @@
 .roboto-txt {
     font-family: 'Roboto', sans-serif;
 }
-
 /*----------------------------web-kit scroll bar styling */
 ::-webkit-scrollbar {
     width: .6vw;
@@ -300,7 +299,7 @@ h3 {
 /* -----------------------------------about page styling */
 .page-box {
     margin-left: 8.33%;
-    height: 100vh;
+    height: 94.4vh;
     position: relative;
     background-color: var(--dark-red);
 }
@@ -400,6 +399,11 @@ h3 {
     }
 
     .hero-box,
+    .page-box{
+        height: 89vh;
+    }
+
+    .hero-box,
     .project,
     .page-box,
     .about-text {
@@ -408,7 +412,7 @@ h3 {
     }
 
     .abt-m {
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     .project-info-card {
