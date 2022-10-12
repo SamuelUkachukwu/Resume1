@@ -10,8 +10,6 @@ window.addEventListener("scroll", () => {
   siteScrolled = scrolledUp;
 });
 
-document.getElementById("copy-right").innerHTML = new Date().getFullYear();
-
 (function () {
   emailjs.init("ikQ7u-QHKbEX7pcU2");
 })();
